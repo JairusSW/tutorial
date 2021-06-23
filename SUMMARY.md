@@ -6,6 +6,7 @@
 * [Using imports](using-imports.md)
 * [Using the loader](using-the-loader.md)
 * [Using NPM](using-npm.md)
+* [Using Transforms](using-transforms.md)
 * [API](api/README.md)
   * [trace](api/trace.md)
 * [How-to](how-to/README.md)
