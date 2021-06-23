@@ -4,8 +4,6 @@ description: Publishing AS packages to npm and more!
 
 # Using NPM
 
-
-
 ## Publishing to NPM
 
 #### _Publishing an AS project_
