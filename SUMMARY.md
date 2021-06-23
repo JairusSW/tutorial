@@ -5,4 +5,5 @@
   * [Running the program](getting-started/running-the-program.md)
 * [Using imports](using-imports.md)
 * [Using the loader](using-the-loader.md)
+* [Using NPM](using-npm.md)
 
