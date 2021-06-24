@@ -1,5 +1,5 @@
 ---
-description: 'The loader allows you to pass strings, arrays, and function between AS and JS.'
+description: "The loader allows you to pass strings, arrays, and function between AS and JS."
 ---
 
 # Using the loader
@@ -8,61 +8,63 @@ description: 'The loader allows you to pass strings, arrays, and function betwee
 
 ## Overview
 
-The AS loader allows you to pass multiple types \(string, array, ect..\) between AssemblyScript and JavaScript. It provides a layer on top of the native `WebAssembly` interface that makes interaction much simpler.
+The AssemblyScript loader allows you to pass multiple types \(string, array, etc..\) between AssemblyScript and JavaScript. It provides a layer on top of the native `WebAssembly` interface that makes interaction much simpler.
 
 ## Passing strings
 
-Lets extend our `console.log` function from the previous article to include strings. 
+Let's extend our `console.log` function from the previous article to include strings.
 
 {% code title="index.js" %}
+
 ```javascript
-const fs = require('fs');
-const loader = require('@assemblyscript/loader');
+const fs = require("fs");
+const loader = require("@assemblyscript/loader");
 // Import the loader
 const imports = {
-  /* imports go here */
+	/* imports go here */
 };
 const wasmModule = loader.instantiateSync(
-  fs.readFileSync(__dirname + '/build/optimized.wasm'),
-  imports
+	fs.readFileSync(__dirname + "/build/optimized.wasm"),
+	imports
 );
 // Instantiate the AS program
 
-wasmModule.exports.test()
+wasmModule.exports.test();
 // Run the app!
 
-module.exports = wasmModule.exports
+module.exports = wasmModule.exports;
 ```
+
 {% endcode %}
 
-Now, our main AS file.
+Our main AssemblyScript file should look like this:
 
 ```javascript
-declare function log(message: string): void
+declare function log(message: string): void;
 // Import the JS log function. (console.log)
 
 export function test(): void {
-    log('Hello World!')
-    // Log 'Hello World!' to the console!
+	log("Hello World!");
+	// Log 'Hello World!' to the console!
 }
 ```
 
-Lastly, we modify our imports
+Lastly, we can modify our imports to **convert** AssemblyScript's `message` input to a string.
 
 ```javascript
 const imports = {
-  index: {
-    log: (message) => {
-      const content = wasmModule.exports.__getString(message)
-      // Convert message to string
-      console.log(content)
-      // Log it to the console.
-    }
-  }
+	index: {
+		log: (message) => {
+			const content = wasmModule.exports.__getString(message);
+			// Convert message to string
+			console.log(content);
+			// Log it to the console.
+		}
+	}
 };
 ```
 
-Almost there! Make sure to rebuild!
+Make sure to recompile!
 
 ```javascript
 ~ npm run asbuild
@@ -76,4 +78,3 @@ And lastly, run!
 ```
 
 It worked! 😀
-
