@@ -14,5 +14,6 @@
   * [Make a HTTP request](how-to/make-a-http-request.md)
 * [Projects](projects/README.md)
   * [VectorEngine](projects/vectorengine.md)
+* [Discord](discord.md)
 * [FAQ](faq.md)
 
