@@ -6,17 +6,16 @@ description: Publishing AS packages to npm and more!
 
 ## Publishing to NPM
 
-#### _Publishing an AssemblyScript project_
+### _Publishing an AssemblyScript project_
 
 Publishing an AS package to NPM is quite simple. We need to delete the `main` key and provide the `types` and `ascMain` keys in our `package.json`.
 
 {% hint style="info" %}
-Make sure that the main AssemblyScript file is named `index.ts`.  
+Make sure that the main AssemblyScript file is named `index.ts`.\
 Don't include a `./`\` in front of your types/ascMain path.
 {% endhint %}
 
 {% code title="package.json" %}
-
 ```javascript
 {
   "name": "as-example",
@@ -30,19 +29,17 @@ Don't include a `./`\` in front of your types/ascMain path.
   "dependencies": {}
 }
 ```
-
 {% endcode %}
 
 {% hint style="warning" %}
-If you are publishing an AssemblyScript file, do not add the `main` property.
+Both ascMain and types MUST point to an `index.ts` file. If not, AssemblyScript will panic.
 {% endhint %}
 
-#### _Publishing the loader_
+### _Publishing the loader_
 
-Publishing the loader file works if you are targeting JS modules. Keep in mind that this **_will not work_** with AssemblyScript projects.
+Publishing the loader file works if you are targeting JS modules. Keep in mind that this _**will not work**_ with AssemblyScript projects.
 
 {% code title="package.json" %}
-
 ```javascript
 {
   "name": "as-example",
@@ -56,7 +53,6 @@ Publishing the loader file works if you are targeting JS modules. Keep in mind t
   "dependencies": {}
 }
 ```
-
 {% endcode %}
 
 {% hint style="info" %}
