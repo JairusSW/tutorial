@@ -13,6 +13,7 @@
   * [Write to the console](how-to/write-to-the-console.md)
   * [Make a HTTP request](how-to/make-a-http-request.md)
   * [Use Variant data types](how-to/use-variant-data-types.md)
+  * [Use JSON (de)serialization](how-to/use-json-de-serialization.md)
 * [Projects](projects/README.md)
   * [VectorEngine](projects/vectorengine.md)
 * [Discord](discord.md)
