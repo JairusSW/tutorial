@@ -4,24 +4,23 @@ description: How to run our first AssembyScript program!
 
 # Running the program
 
-#### [Live Editor](https://stackblitz.com/edit/node-y9qnxy) ⚡
+### [Live Editor](https://stackblitz.com/edit/node-y9qnxy) ⚡
 
 ## Setting it up
 
 Navigate to the `index.js` file in your project folder. Replace it with this code.
 
 {% code title="index.js" %}
-
 ```javascript
 const fs = require("fs");
 const loader = require("@assemblyscript/loader");
 // Import the loader
 const imports = {
-	/* imports go here */
+    /* imports go here */
 };
 const wasmModule = loader.instantiateSync(
-	fs.readFileSync(__dirname + "/build/optimized.wasm"),
-	imports
+    fs.readFileSync(__dirname + "/build/optimized.wasm"),
+    imports
 );
 // Instantiate the AS program
 
@@ -29,7 +28,6 @@ const wasmModule = loader.instantiateSync(
 
 module.exports = wasmModule.exports;
 ```
-
 {% endcode %}
 
 Now, add these lines of code right below `// CODE-GOES-HERE`.

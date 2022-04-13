@@ -4,9 +4,9 @@ description: How to make your first AssemblyScript program.
 
 # Getting Started
 
-#### [Live Editor](https://stackblitz.com/edit/node-y9qnxy) ⚡
+### [Live Editor](https://stackblitz.com/edit/node-y9qnxy) ⚡
 
-## Installing AssemblyScript <a id="d52a"></a>
+## Installing AssemblyScript <a href="#d52a" id="d52a"></a>
 
 _Click on Live Editor to do this tutorial in the browser_
 

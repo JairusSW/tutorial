@@ -7,8 +7,8 @@ VectorEngine is an [AssemblyScript](https://assemblyscript.org) & [WebAssembly](
 ### Features
 
 * Retro game engine
-* Small \(4-80kb\)
-* Supports Multiplayer \(beta\)
+* Small (4-80kb)
+* Supports Multiplayer (beta)
 
 ### Tutorials
 
@@ -26,7 +26,7 @@ VectorEngine is an [AssemblyScript](https://assemblyscript.org) & [WebAssembly](
 
 You can install VectorEngine using npm:
 
-```text
+```
 npm i vectorengine
 ```
 
@@ -127,7 +127,7 @@ If you have any questions, you can contact me on the following social media:
 
 * twitter: [@battagline](https://twitter.com/battagline)
 * linkedin: [linkedin.com/in/battagline](https://linkedin.com/in/battagline)
-* assemblyscript discord: [@battagline](https://discord.gg/assemblyscript) 
+* assemblyscript discord: [@battagline](https://discord.gg/assemblyscript)\
+
 
 Or read AssemblyScript Tutorials on [wasmbook.com](https://wasmbook.com)
-
